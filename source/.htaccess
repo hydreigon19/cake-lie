@@ -1,1 +1,5 @@
+
+# HTID:14648326: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:14648326:
 AddType application/x-httpd-php .htm .html
