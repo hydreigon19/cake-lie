@@ -1,0 +1,204 @@
+html{
+    height: 100%;
+}
+body{
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#f4f4f4;
+
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Global*/
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+.button_1{
+    height: 38px;
+    background: #e8491d;
+    border:0;
+    padding-left:20px;
+    padding-right: 20px;
+    color:#ffffff;
+}
+/*Header*/
+header{
+    background:#35424a;
+    color:#ffffff;
+    padding-top: 10px;
+    padding-bottom:10px;
+    min-height: 70px;
+    border-bottom:#e8491d 3px solid;
+}
+header a{
+    color:#ffffff;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:16px;
+
+}
+
+header li{
+    float:left;
+    display:inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    position: relative;
+    float:left;
+    
+}
+header #branding img{
+    width:30%;
+    height:30%;
+    
+}
+header nav{
+    float:right;
+    margin-top:70px;
+}
+
+header .highlight, header .current a{
+    color:#e8491d;
+    font-weight:bold;
+}
+header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+}
+header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+}
+
+/*showcase*/
+#showcase{
+    min-height:450px;
+    background:url('../images/wedding.jpg') no-repeat center;
+    background-size: cover;
+    text-align:center;
+    color:#ffffff;
+}
+/*order*/
+#order{
+    padding: 15px;
+    color: #ffffff;
+    background:#35424a;
+
+}
+#order h1{
+    float:left;
+}
+#order form{
+    float:right;
+    margin-top:15px;
+
+}
+/*gallery showcase*/
+#gallery{
+    margin: auto;
+    /*fix padding*/
+    
+}
+#gallery img{
+    transition: 1s;
+    padding: 15px;
+    width:200px;
+
+    max-height:17vw;
+    min-height:17vw;
+    max-width:24vw;
+    min-width:24vw;
+}
+#gallery img:hover{
+    filter:grayscale(100%);
+    transform: scale(1.1);
+}
+
+#boxes{
+    margin-top:20px;
+}
+#boxes .box{
+    float:left;
+    text-align:center;
+    width:30%;
+    padding:10px;
+}
+#boxes .box img{
+    width:25%;
+    
+}
+
+
+/*contact*/
+#textbody{
+    padding:20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+
+}
+#textbody ul li{
+    display: inline-block;
+}
+
+
+footer{
+    padding:20px;
+    margin-top: 20px;
+    color:#fff;
+    background-color: #e8491d;
+    text-align:center;
+
+    margin-top:auto;
+}
+
+
+/*Media Queries*/
+@media(max-width: 850px){
+    header #branding,
+    header nav,
+    header nav li,
+    #order h1,
+    #order form,
+    #boxes .box{
+        float:none;
+        text-align: center;
+        width:100%;
+    }
+    header{
+        padding-bottom:20px;
+    }
+    header nav{
+        margin-top: 15px;
+    }
+    header nav li{
+        padding: 0 7px 0 7px;
+    }
+    #showcase h1{
+        margin-top:40px;
+
+    }
+    #order button{
+        display:block;
+        width:100%;
+
+    }
+    #boxes .box img{
+        width:15%;
+        
+    }
+    
+}
+
+

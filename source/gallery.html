@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <meta name="description" content="Affordable and Quality Homemade Cakes">
+      <meta name="keywords" content="cake">
+      <meta name="author" content="George">
+      <title>Carmen Bakeri | Gallery</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />   
+  </head>
+<body>
+    <header>
+        <div class="container">
+          <div id="branding">
+            <img src="images/mainIcon.png" alt="Carmen Bakeri">
+          </div>
+          <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+        </div>
+    </header>
+
+    <!--Gallery Showcase-->
+    <div id="gallery">
+      <!--
+      <a href="images/gallery/image1.jpg" data-fancybox="gallery"><img src="images/gallery/image1.jpg"></a>
+      -->
+      <?php
+      $dir_path = "images/gallery/";
+      $extensions_array = array('jpg','jpeg');
+
+      if(is_dir($dir_path))
+      {
+        $files = scandir($dir_path);
+
+        for($i = 0; $i < count($files); $i++)
+        {
+          if($files[$i] != '.' && $files[$i] !='..')
+          {
+            $file = pathinfo($files[$i]);
+            $extension = $file['extension'];
+            if(in_array($extension, $extensions_array))
+            {
+            echo "<a href='$dir_path$files[$i]' data-fancybox='gallery'><img src='$dir_path$files[$i]'></a>";
+            }
+          }
+        }
+      }
+      ?>
+    </div>
+
+    <!--Footer-->
+    <footer id="main-footer">
+      <p>Carmen's Bakeri</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</body>
+</html>
